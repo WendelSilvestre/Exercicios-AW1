@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="HTML">
+    <meta name="author" content="Wendel De Oliveira Silvestre">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+  </head>
+  <body>
+    <h3>Menu de Navegação</h3>
+    <ul>
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./indexPaginaInterna.html">Influenza Subtipo A H1N1</a></li>
+    </ul>
+
+    <section>
+      <h3>Faça seu cadastro</h3>
+        <form>
+          <fieldset>
+            <fieldset>
+              <legend>Dados Pessoais:</legend>
+                <label for="login">Login:</label><br>
+                <input type="text" id="login" name="login">
+                <br>
+                <label for="senha">Senha:</label><br>
+                <input type="password" id="senha" name="senha">
+                <br>
+                <label for="nome">Nome:</label><br>
+                <input type="text" id="nome" name="nome">
+                <br>
+                <label for="data">Data de Nascimento:</label><br>
+                <input type="date" id="data" name="data">
+                <br>
+                <label for="RG">RG:</label><br>
+                <input type="number" id="RG" name="RG" maxlength="9">
+                <br>
+                <label for="URG">UF:</label><br>
+                <input list="URGs" id="URG" name="URG">
+                  <datalist id="URGs">
+                    <option value="AC"</option>
+                    <option value="CE"</option>
+                    <option value="GO"</option>
+                    <option value="SP"</option>
+                    <option value="RN"</option>
+                  </datalist>
+                <br>
+                <label for="CPF">CPF:</label><br>
+                <input type="number" id="CPF" name="CPF" maxlength="11">
+              </fieldset>
+              <br>
+              <fieldset>
+                <legend>Genero:</legend>
+                <input type="radio" id="masculino" name="genero" value="Masculino" required>
+                <label for="masculino">Masculino</label>
+                <input type="radio" id="feminino" name="genero" value="Feminino" required>
+                <label for="feminino">feminino</label>
+              </fieldset>
+              <br>
+              <fieldset>
+                <legend>Endereço:</legend>
+                <label for="rua">Rua:</label><br>
+                <input type="text" id="Rua" name="Rua">
+                <br>
+                <label for="numero">Numero:</label><br>
+                <input type="number" id="numero" name="numero">
+                <br>
+                <label for="complemento">Complemento:</label><br>
+                <input type="text" id="complemento" name="complemento">
+                <br>
+                <label for="cep">CEP:</label><br>
+                <input text="text" id="cep" name="cep" placeholder="00000-000" pattern="[0-9]{5}-[0-9]{3}">
+                <br>
+                <label for="cidade">Cidade:</label><br>
+                <input type="text" id="cidade" name="cidade">
+                <br>
+                <label for="UF">UF:</label><br>
+                <input type="text" id="UF" name="UF" value="SP" readonly>
+                <br>
+              </fieldset>
+              <label for="Email">E-mail:</label><br>
+              <input type="email" id="email" name="email">
+              <br>
+              <label for="telefone">Telefone:</label><br>
+              <input type="tel" id="telefone" name="telefone">
+              <br>
+              <fieldset>
+                <legend>Dados complementares:</legend>
+                <fieldset>
+                  <legend>Estado-Civil</legend>
+                  <input type="radio" id="solteiro" name="estado" value="Solteiro" required>
+                  <label for="solteiro">Solteiro</label>
+                  <input type="radio" id="casado" name="estado" value="Casado" required>
+                  <label for="Casado">Casado</label>
+                  <input type="radio" id="viuvo" name="estado" value="viuvo" required>
+                  <label for="viuvo">Viuvo</label>
+                  <input type="radio" id="divorciado" name="estado" value="divorciado" required>
+                  <label for="divorciado">Divorciado</label>
+                </fieldset>
+                <br>
+                <fieldset>
+                  <legend>Vacinado contra COVID-19:</legend>
+                  <label for="sim">Sim</label>
+                  <input type="radio" id="sim" name="escolha" value="sim" required>
+                  <label for="nao">Não</label>
+                  <input type="radio" id="nao" name="escolha" value="nao" required>
+                </fieldset>
+                <br>
+                <fieldset>
+                  <legend>Doenças Crônicas</legend>
+                  <input type="checkbox" id="diabete" name="diabete" value="Diabete">
+                  <label for="diabete">Diabete:</label>
+                  <input type="checkbox" id="cardiopatia" name="cardiopatia" value="Cardiopatia">
+                  <label for="cardiopatia">Cardiopatia:</label>
+                  <input type="checkbox" id="hipertensão" name="hipertensão" value="Hipertensão">
+                  <label for="hipertensão">Hipertensão:</label>
+                  <input type="checkbox" id="DR" name="DR" value="DR">
+                  <label for="DR">Doença Renal:</label>
+                  <input type="checkbox" id="DH" name="DH" value="DH">
+                  <label for="DH">Doença Hepática:</label>
+                  <input type="checkbox" id="hipertensãoA" name="hipertensãoA" value="HipertensãoA">
+                  <label for="hipertensãoA">Hipertensão Arterial:</label>
+                  <input type="checkbox" id="outros" name="outros" value="Outros">
+                  <label for="outros">Outros:</label>
+                </fieldset>
+                <br>
+                <label for="profissao">Profissão:</label><br>
+                <input type="profissao" id="profissao" name="profissao">
+                <br>
+              </fieldset>
+              <input type="submit" value="Enviar">
+              <input type="reset" value="Limpar">
+          </fieldset>
+        </form>
+    </section>
+  </body>
+</html>
