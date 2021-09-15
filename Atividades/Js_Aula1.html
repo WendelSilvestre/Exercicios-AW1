@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Free Web Tutorials">
+    <meta name="keywords" content="HTML">
+    <meta name="author" content="Wendel De Oliveira Silvestre">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wendel - AW1</title>
+  </head>
+  <body>
+
+    <script>
+      document.write("Exercicio 1 <br>");
+      var bruto, liquido, nome, inss, irrf;
+      nome = "José da Silva";
+      bruto = 1000;
+      inss = bruto * 0.085;
+      liquido = bruto - inss;
+      irrf = liquido * 0.12;
+      liquido = bruto - inss - irrf;
+      document.write("Nome: " + nome + "<br>Salário Bruto: R$" + bruto + "<br>Salário Líquido: R$" + liquido + " (Desconto INSS: R$" + inss + " e Desconto IRRF: R$" + irrf + ")");
+    </script>
+
+    <script>
+      document.write("<br><br><br>Exercício 2<br>");
+      var n;
+      n = 2;
+      for(fat = 1; n > 1; n = n -1){
+        fat = fat * n;
+      }
+      document.write("Fatorial de 2 = " + fat);
+      n = 3;
+      for(fat = 1; n > 1; n = n -1){
+        fat = fat * n;
+      }
+      document.write("<br>Fatorial de 3 = " + fat);
+      n = 4;
+      for(fat = 1; n > 1; n = n -1){
+        fat = fat * n;
+      }
+      document.write("<br>Fatorial de 4 = " + fat);
+      n = 5;
+      for(fat = 1; n > 1; n = n -1){
+        fat = fat * n;
+      }
+      document.write("<br>Fatorial de 5 = " + fat);
+    </script>
+
+    <script>
+      document.write("<br><br>Exercício 3<br>");
+      var n;
+      n = 10;
+      for(i = n; i > 0; --i){
+        n = n - 1;
+        document.write(n + "...");
+      }
+    </script>
+  </body>
+</html>
