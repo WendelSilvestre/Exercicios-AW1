@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="HTML">
+    <meta name="author" content="Wendel De Oliveira Silvestre">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+  </head>
+
+  <body>
+
+  <form>
+    <label for="text">Tempo:</label>
+    <input type="text" data-js="tempo"/>
+    <label for="text">Placa Do veículo:</label>
+    <input type="text" data-js="placa"/>
+    <label for="text">Valor inserido:</label>
+    <input type="text" data-js="valor"/>
+    <button type="button">Calcular valor a ser pago!</button>
+
+    <div data-js="result"></div>
+  </form>
+
+  <script>
+
+    document.querySelector('button').addEventListener('click', pegarValor, false);
+    var troco;
+    var valor;
+
+    function pegarValor() {
+      var tempoPermanencia = document.querySelector (' [data-js= "tempo"]').value;
+      var valorPago = document.querySelector (' [data-js= "valor"]').value;
+      var placa = document.querySelector (' [data-js="placa"]').value;
+
+      document.querySelector( '[data-js="result"]' ).innerHTML = calcularTempo(tempoPermanencia, valorPago, placa);
+    }
+
+
+    function calcularTempo(tempoPermanencia, valorPago, placa){
+
+      if(tempoPermanencia <= 30)
+      {
+        valor = 1.0;
+        if (valorPago >= valor){
+          troco = valorPago - valor;
+          return "Troco: R$ " + troco + "<br>Para o carro de placa: " + placa;
+        }
+        else
+        {
+          troco = valor - valorPago;
+          return "Valor insuficiente<br>Ainda falta a pagar: R$ " + troco + "<br>Para o carro de placa: " + placa;;
+        }
+      }
+      else if(tempoPermanencia >= 31 && tempoPermanencia <= 60)
+      {
+        valor = 1.75;
+        if (valorPago >= valor){
+          troco = valorPago - valor;
+          return "Troco: R$ " + troco + "<br>Para o carro de placa: " + placa;;
+        }
+        else
+        {
+          troco = valor - valorPago;
+          return "Valor insuficiente<br>Ainda falta a pagar: R$ " + troco + "<br>Para o carro de placa: " + placa;;
+        }
+      }
+      else if (tempoPermanencia >= 61 && tempoPermanencia <= 120)
+      {
+        valor = 3.0;
+        if (valorPago >= valor){
+          troco = valorPago - valor;
+          return "Troco: R$ " + troco + "<br>Para o carro de placa: " + placa;;
+        }
+        else
+        {
+          troco = valor - valorPago;
+          return "Valor insuficiente<br>Ainda falta a pagar: R$ " + troco + "<br>Para o carro de placa: " + placa;;
+        }
+      }
+      else
+      {
+        valor = "Vai pagar multa ficou mais tempo do que podia, se ferrou";
+      }
+
+
+    }
+
+
+  </script>
+
+
+
+  </body>
+
+</html>
